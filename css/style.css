@@ -655,12 +655,11 @@ a {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    flex-direction: row;
+    gap: 5px;
 }
 
 .tags__list__item {
     border: 3px #eeeeee solid;
-    margin-left: 5px;
     margin-bottom: 6px;
     height: 24px;
     color: #0f0d0e;
@@ -1204,18 +1203,12 @@ li > .social__icon__tumblr {
 
 
 
-
-
-/* mobile не готов */
-
-
-
   @media (max-width: 640px) {
     /* .input__wishes {
         min-height: 24.44%;
     } */ 
 
-
+/* попап не готов, продукты не готовы, проверить нужны ли ховеры, сделать ориентацию */
 
     .popup__container {
         width: 91.65vw;
@@ -1271,11 +1264,10 @@ li > .social__icon__tumblr {
         /* top: -32.7em;
         left: 104%; */
     }
+
+
+    /* сделать попап ...............................................*/
     
-
-/* header mobile готов +++++++++++++++++++++++++++++++*/
-
-
     .menu__list {
         display: none;
     }
@@ -1413,12 +1405,6 @@ li > .social__icon__tumblr {
         font-size: 16px;
     }
 
- /* тренды mobile готов +++++++++++++++++++++++++++++++*/
-
-
-
-
-    /* Контент mobile */
 
     .content {
         margin-top: 44px;
@@ -1495,203 +1481,115 @@ li > .social__icon__tumblr {
     
     .search {
         margin-bottom: 62px;
-        margin-top: 59px;
+        margin-top: 22px;
     }
     
+    .search__group {
+        flex-grow: 1;
+    }
+
     .search__form {
         display: flex;
     }
     
-
-/* от сюда */
-
     .field {
-        box-sizing: border-box;
         width: 100%;
-        padding: 14px 19px;
-        height: 47px;
-        border: none;
-        background-color: #f4f7f6;
-        color: #a2a4a3;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
-        font-size: 14px;
-        margin-top: 37px;
-        border: 1px #f4f7f6 solid;
+        box-sizing: border-box;
+        padding: 19px 17px;
+        font-size: 13px;
+        height: 49px;
     }
     
     .button {
-        box-sizing: border-box;
-        width: 48px;
-        height: 47px;
-        background-color: #b59f5b;
-        margin-left: -48px;
-        border: none;
-        margin-top: 37px;
-    }
-    
-    .button:hover{
-        background-color: #323232;
-    }
-    .image__button {
-        width: 100%x;
-        height: 19px;
-    }
-    
-    .field:focus {
-        border-bottom: 1px #cabc8f solid; 
-        border-top: 1px #b59f5b solid;
-        border-left: 1px #b59f5b solid;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 47px;
+        height: 49px;
     }
     
     .form__input {
-        box-sizing: border-box;
-        width: 272px;
-        border: none;
-        background-color: #f4f7f6;
-        padding: 17px 19px;
-        margin-bottom: 17px;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
-        color: #a2a4a3;
+        width: 100%;
+        margin-bottom: 18px;
         font-size: 13px;
     }
-    
-    .form__input:focus {
-        border-bottom: 1px #cabc8f solid; 
-        border-top: 1px #b59f5b solid;
-        border-left: 1px #b59f5b solid;
-        border-right: 1px #b59f5b solid;
-        outline: none;
-    }
-    
+      
     .form__bottom {
-        box-sizing: border-box;
-        width: 272px;
+        width: 100%;
         height: 48px;
-        border: none;
-        background-color: #b59f5b;
-        color: #fff;
-        text-transform: uppercase;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
-        font-weight: bold;
-        font-size: 14px;
-        margin-bottom: 60px;
-        border-top: 1px #e6dfc8 solid;
+        margin-bottom: 44px;
     }
 
-/* Продукты mobile*/
+    .tags__list__item {
+        margin-bottom: 6px;
+        height: 31px;
+    }
+
+    .tags__list__item > a {
+        padding: 9px 15px;
+    }
+
+    .tags {
+        margin-bottom: 45px;
+    }
+
+    .themes {
+        margin-top: -20px;
+    }
+
+    .themes__list__item {
+        padding: 13px 0;
+    }
+
+
+    .themes__list__quantity {
+        font-size: 12px;
+    }
+
+
+
+
+
+/* Продукты mobile !!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
     .products {
-        width: 91.14%;
-        margin: 0 auto;
-    }    
-
-    .products__content {
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 3.46%;
-        width: 100%;
-        margin-top: 41px;
-    }
-    
-    .product {
-        /* display: block; */
-        box-sizing: border-box;
-        width: 32%;
-        max-height: 457.5px;
-    }
-    
-    .product__imgbox {
         display: none;
-        width: 41.75%;
     }
+   
     
-    .product__preview {
-        width: 100%;
-        object-fit: cover;
-    }
-    
-    .product__prices {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        margin-top: 23px;
-    }
-    
-    .product__price {
-        align-self: center;
-        color: #0f0d0e;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
-        font-weight: bold;
-        font-size: 20px;
-    }
-    
-    .product__price__odd {
-        font-size: 14px;
-        text-decoration: line-through;
-    }
-    
-    .product__title {
-        color: #0f0d0e;
-        text-transform: uppercase;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 1.2;  
-        margin-top: 52px;
-        margin-bottom: 8px; 
-    }
-    
-    .product__link {
-        color: #b59f5b;
-    }
-    
-    .product__link:hover {
-        text-decoration: underline;
-    }
-    
-    .product__body {
-        border: rgba(143, 131, 76, 0.6) 3px solid;
-        margin-top: -32px;
-        padding-left: 23px;
-        padding-right: 23px;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-    }
-    
-    .product:nth-child(3n+2) {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    
-    .product__button {
-        box-sizing: border-box;
-        width: 140px;
-        height: 48px;
-        border: none;
-        background-color: #b59f5b;
-        text-transform: uppercase;
-        font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
-        font-weight: bold;
-        font-size: 14px;
-        border-top: 1px #e6dfc8 solid;
-    }
-    .product__button > a {
-        color: #fff;
-    }
-    
-    .product__button:hover {
-        border-top: 1px #bbbbbb solid;
-        background-color: #323232;
-    }
 
-/* Подвал */
+  
+
+
+/* продукты не сделаны !!!!!!!!!!!!!!!!!!!!!!*/
+
+
+
 
 
     footer {
+        margin: 44px auto;
         width: 91%;
+        position: relative;
     }
 
-  }
+
+
+    .social__media {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        width: 64.2%;
+        gap: 0px;
+    }
+
+    .copyright {
+        margin-bottom: 47px;
+    }
+
+
+}
+
+
+
 
