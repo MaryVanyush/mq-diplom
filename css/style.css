@@ -717,8 +717,6 @@ a {
 }
 
 .products {
-    /* display: flex;
-    justify-content: space-between; */
     width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
@@ -924,11 +922,6 @@ li > .social__icon__tumblr {
 
   @media (min-width: 641px) and (max-width: 1200px) {
     .popup__container {
-        width: 391px;
-        height: 70vh;
-    }
-    
-    .popup__container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -990,7 +983,6 @@ li > .social__icon__tumblr {
 
     .header {
         display: flex;
-        /* min-width: 641px; */
         max-width: 1200px;
         width: 100%;
         background-image: url("../images/banner-bg-tablet.jpg");
@@ -1060,7 +1052,6 @@ li > .social__icon__tumblr {
     }
 
     .content {
-        /* min-width: 571px; */
         max-width: 100%;
         padding-left: 35px;
         padding-right: 35px;
@@ -1125,16 +1116,9 @@ li > .social__icon__tumblr {
         width: 272px;
     }
 
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-/* не выравнивается бордер по одной линии*/
-
     .products {
         width: 91.14%;
         margin: 0 auto;
-        /* display: flex;
-        /* flex-direction: column; */
     }    
 
     .product {
@@ -1156,6 +1140,7 @@ li > .social__icon__tumblr {
      }
 
      .product__body {
+        min-height: 356px;
         position: relative;
         padding-top: 2em;
      }
@@ -1208,19 +1193,20 @@ li > .social__icon__tumblr {
         min-height: 24.44%;
     } */ 
 
-/* попап не готов, продукты не готовы, проверить нужны ли ховеры, сделать ориентацию */
+/* попап не готов, сделать ориентацию */
 
     .popup__container {
         width: 91.65vw;
-        height: 85.44vh;
-        padding: 1.8rem 1.55rem;
+        height: auto;
+        padding: 1rem 1rem;
+        padding-bottom: 0;
         font-size: 13px;
     }
     
 
     .title__popup {
         font-size: 16px;
-        margin-bottom: 1.62rem;
+        margin-bottom: 8%;
     }
 
     .title__popup::after {
@@ -1233,12 +1219,12 @@ li > .social__icon__tumblr {
      
     .popup__frequency {
         padding: 1.3em 1.5em;
-        margin-bottom: 2.39em;
+        margin-bottom: 7%;
     }
     
    
     .popup__mailing {
-        margin-bottom: 2.5em;
+        margin-bottom: 7%;
     }
     
     .popup__radio+label::before {
@@ -1247,23 +1233,23 @@ li > .social__icon__tumblr {
     }
 
     .input__wishes {
-        /* min-height: 132.33px; */
-        /* height: 10.14em; */
-        /* height: 20.6vh; */
+        min-height: 79%;
+        height: 79%;
         padding: 1.3em 1.5em;
     }
-       
+
+          
     .popup__bottom__form {
-        /* height: 3.46em; */
-        /* height: 7.57vh; */
+        height: 3em;
         font-size: 14px;
-        margin-top: 1.87em;
+        margin-top: 7%;
        }
 
        .popup__close {
-        /* top: -32.7em;
-        left: 104%; */
+        top: -23.5em;
+        left: 98%;
     }
+
 
 
     /* сделать попап ...............................................*/
@@ -1362,7 +1348,6 @@ li > .social__icon__tumblr {
 
     .trends {
         margin-top: 39px;
-        /* margin-bottom: 44px; */
     }
 
     .section__title {
@@ -1545,34 +1530,71 @@ li > .social__icon__tumblr {
         font-size: 12px;
     }
 
-
-
-
-
-/* Продукты mobile !!!!!!!!!!!!!!!!!!!!!!!!!!*/
-
     .products {
-        display: none;
+        width: 91.14%;
+        margin: 0 auto;
+        padding: 0;
+    }    
+
+    .product {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 26px;
     }
-   
-    
 
-  
+    .product__imgbox {
+        position: relative;
+        max-width: 90%;
+    }
 
+    .product__preview > img {
+        position: absolute;
+        width: 100%;
+        object-position: center;
+        object-fit: cover;
+    }
 
-/* продукты не сделаны !!!!!!!!!!!!!!!!!!!!!!*/
+    .product__body {
+        position: relative;
+        padding-top: 2em;
+    }
 
+    .products__content {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 3.46%;
+        width: 95%; 
+    }
 
+    .product__prices {
+        margin-bottom: 26px;
+    }
 
+    .product__price {
+        flex-shrink: 0;
+    }
 
+    .product:nth-child(3n+2) {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .product__title {
+        font-size: 17px;
+        margin-top: 35%;
+        margin-bottom: 11px; 
+    } 
+
+    .product__button {
+        width: 60%;
+        max-width: 140px;
+    }
 
     footer {
         margin: 44px auto;
         width: 91%;
         position: relative;
     }
-
-
 
     .social__media {
         display: flex;
@@ -1587,6 +1609,10 @@ li > .social__icon__tumblr {
         margin-bottom: 47px;
     }
 
+    @media (max-width: 640px) and (orientation: landscape) {
+        .trends__container {
+            flex-basis: 49%;
+        }
 
 }
 
